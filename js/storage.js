@@ -11,9 +11,11 @@ const addItem = () => {
     const productNameInput = document.getElementById('product-input');
     const productNameValue = productNameInput.value;
 
+    const productPriceInput = document.getElementById('product-price');
+    const productPriceValue = productPriceInput.value;    
+
     if (productNameValue && productPriceValue) {
-           const productPriceInput = document.getElementById('product-price');
-            const productPriceValue = productPriceInput.value;
+
 
             // set local storage value
             setInternalProduct(productNameValue, productPriceValue);
