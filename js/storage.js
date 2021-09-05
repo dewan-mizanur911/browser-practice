@@ -1,8 +1,6 @@
 const displayLocalStorageItems = () => {
     const items = getProduct();
-    console.log(items);
     for (const name in items) {
-        console.log(items[name]);
         displayItems(name, items[name]);
     }
 }
