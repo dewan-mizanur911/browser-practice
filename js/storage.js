@@ -7,7 +7,7 @@ const displayLocalStorageItems = () => {
 
 const addItem = () => {
     const productNameInput = document.getElementById('product-input');
-    const productNameValue = productNameInput.value;
+    const productNameValue = productNameInput.value.toLowerCase();
 
     const productPriceInput = document.getElementById('product-price');
     const productPriceValue = productPriceInput.value;    
@@ -45,15 +45,14 @@ const setInternalProduct = (productName, productPrice) => {
     else {
         product[productName] = productPrice;
     }
-    console.log(product);
-    const stringified = JSON.stringify(product);
+    const stringified = JSON.stringify(product).toLowerCase();
     localStorage.setItem('products', stringified);
 }
 
 const displayItems = (name, price)=> {
     const ul = document.getElementById('ul');
     const li = document.createElement('li');
-    li.innerText = `Product name : ${name}
+    li.innerText = `Product name : ${name.toUpperCase()}
     Product price : ${price}`;
     ul.appendChild(li);
 }
